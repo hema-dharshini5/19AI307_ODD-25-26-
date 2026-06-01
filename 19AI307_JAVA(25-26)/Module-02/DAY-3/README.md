@@ -1,80 +1,98 @@
-# Ex.No:2(D) VARIABLE SCOPE AND CONSTRUCTOR
+# Ex.No:2(C) ACCESS SPECIFIERS
 
 ## QUESTION:
-Write a class that uses a constructor to initialize variables and overrides toString() method.
+Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.
 
 ## AIM:
-To write a Java program that initializes object variables using a constructor and overrides the toString() method to display object details in a readable format.
+To write a Java program that defines a class BankAccount with private attributes accountNumber and balance, and provides public getter and setter methods to access and modify these values.
 
 ## ALGORITHM :
+1. Define a class BankAccount with two private instance variables:
 
-1. Define a class Student with two instance variables:
+        String accountNumber
 
-     String name
+        double balance
 
-     int age
+3. Create public getter and setter methods for both variables:
 
-2. Create a parameterized constructor to initialize these variables.
+      getAccountNumber() and setAccountNumber()
+   
+   
+      getBalance() and setBalance()
 
-3. Override the toString() method to return the student details in a formatted string.
+5. In the main() method, create a Scanner object to read input from the user.
 
-4. In the main() method:
+6. Create an object of the BankAccount class.
 
-    - Read the name and age from the user.
+7. Read the account number and balance from the user and store them using setter methods.
 
-    - Create a Student object using the constructor.
+8. Retrieve and print the stored values using getter methods.
 
-5. Print the object, which automatically calls the overridden toString() method.
+9. Close the Scanner and end the program.
 
-6. End the program.
+
 
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a conditional statement using Java
+Program to implement a Access Specifiers using Java
 Developed by: Hema Dharshini N
-RegisterNumber:  212223220034
+Register Number: 212223220034
 */
 ```
 
 ## SOURCE CODE:
-
-```
+```JAVA
 import java.util.Scanner;
 
-class Student {
-    String name;
-    int age;
+class BankAccount {
+   
+    private String accountNumber;
+    private double balance;
 
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
+    
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
-    @Override
-    public String toString() {
-        return "Student{name='" + name + "', age=" + age + "}";
+   
+    public double getBalance() {
+        return balance;
+    }
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }
 
-public class StudentDemo {
+public class prog {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        int age = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        Student student = new Student(name, age);
-        System.out.println(student.toString());
+        BankAccount account = new BankAccount();
+
+        String accNo = sc.nextLine();
+        double bal = sc.nextDouble();
+
+        account.setAccountNumber(accNo);
+        account.setBalance(bal);
+
+        System.out.println("Account Number: " + account.getAccountNumber());
+        System.out.println("Balance: " + account.getBalance());
+
+        sc.close();
     }
 }
 ```
 
 ## OUTPUT:
-<img width="896" height="395" alt="image" src="https://github.com/user-attachments/assets/0b280b01-a09a-4749-b733-41411f01b00a" />
+<img width="826" height="465" alt="image" src="https://github.com/user-attachments/assets/972c4fcf-d9d0-43f8-bc30-518764a4d55e" />
+
 
 
 ## RESULT:
-The program has been executed successfully and the desired output has been obtained.
-
+Therfore the program successfully stores account details using setter methods and retrieves them using getter methods.
