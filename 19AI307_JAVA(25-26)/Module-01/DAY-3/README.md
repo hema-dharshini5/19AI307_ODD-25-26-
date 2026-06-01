@@ -1,12 +1,11 @@
-# Ex.No:1(C) LOOPING STATEMENT
+# Ex.No:1(D) ARRAYS
 
 ## QUESTION:
-Write a Java program to calculate the factorial of a number using a for loop. The factorial of n is the product of all positive integers less than or equal to n.
-
+Write a Java program to reverse an array
 
 
 ## AIM:
-To write a Java program that demonstrates the use of looping statements such as for, while, or do-while to perform repetitive tasks.
+To write a Java program to reverse the elements of an array and display the reversed array.
 
 
 ## ALGORITHM :
@@ -16,17 +15,19 @@ To write a Java program that demonstrates the use of looping statements such as 
 
 3 .Create a Scanner object to read input from the user.
 
-4 .Read an integer value n from the user.
+4 .Read the size of the array n.
 
-5 .Initialize a variable fact to 1.
+5 .Create an integer array of size n.
 
-6 .Use a for loop from i = 1 to i = n:
+6 .Read all n elements from the user and store them in the array.
 
-7 .Multiply fact by i in each iteration.
+7 .Use a loop to print the elements of the array in reverse order:
 
-8 .After the loop ends, display the value of fact as the factorial of n.
+8 .Start from the last index and move towards the first index.
 
-9 .End the program.
+9 .Display the reversed array.
+
+10 .End the program.
 
 
 
@@ -35,9 +36,9 @@ To write a Java program that demonstrates the use of looping statements such as 
 ## PROGRAM:
  ```
 /*
-Program to implement a Looping Statement using Java
+Program to implement a Array concept using Java
 Developed by: Hema Dharshini N
-RegisterNumber:  212223220034
+RegisterNumber: 212223220034
 */
 ```
 
@@ -45,30 +46,33 @@ RegisterNumber:  212223220034
 ```
 import java.util.Scanner;
 
-public class Factorial {
+public class ReverseArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Input from user
+        
         int n = sc.nextInt();
+        int[] arr = new int[n];
 
-        long fact = 1; 
-
-        for (int i = 1; i <= n; i++) {
-            fact *= i;
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
 
-        // Output
-        System.out.println("Factorial of " + n + " is: " + fact);
+        
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
     }
 }
 ```
 
 
 ## OUTPUT:
-<img width="1286" height="348" alt="image" src="https://github.com/user-attachments/assets/711b62fd-42ff-41a1-b8d6-ff6cffb3fc8f" />
+<img width="1280" height="633" alt="image" src="https://github.com/user-attachments/assets/7da14810-7037-4ed3-bad9-7d567b3cedaa" />
 
 
 ## RESULT:
-Thus, the program using looping statements in Java was successfully executed and the desired output was obtained.
-
+Thus, the Java program to reverse the elements of an array was executed successfully and the expected output was obtained.
