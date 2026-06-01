@@ -1,37 +1,41 @@
-# Ex.No:1(E) STRINGS AND MATH FUNCTION
+# Ex.No:1(C) LOOPING STATEMENT
 
 ## QUESTION:
-Write a Java program to reverse a given string.
+Write a Java program to calculate the factorial of a number using a for loop. The factorial of n is the product of all positive integers less than or equal to n.
 
 
 
 ## AIM:
-To write a Java program that accepts a string from the user and prints the reversed string.
+To write a Java program that demonstrates the use of looping statements such as for, while, or do-while to perform repetitive tasks.
 
 
 ## ALGORITHM :
-1.	Start the program.
+1 .Start the program.
 
 2 .Import the package java.util.Scanner.
 
 3 .Create a Scanner object to read input from the user.
 
-4 .Read the input string.
+4 .Read an integer value n from the user.
 
-5 .Initialize an empty string variable rev to store the reversed string.
+5 .Initialize a variable fact to 1.
 
-6 .Use a loop to traverse the string from the last character to the first:
+6 .Use a for loop from i = 1 to i = n:
 
-7 .Append each character to rev.
+7 .Multiply fact by i in each iteration.
 
-8 .After the loop ends, display the reversed string.
+8 .After the loop ends, display the value of fact as the factorial of n.
 
-9 .End the program.	
+9 .End the program.
+
+
+
+
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Strings and Math Function using Java
+Program to implement a Looping Statement using Java
 Developed by: Hema Dharshini N
 RegisterNumber:  212223220034
 */
@@ -41,27 +45,30 @@ RegisterNumber:  212223220034
 ```
 import java.util.Scanner;
 
-public class ReverseString {
+public class Factorial {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String str = sc.nextLine();
-        String rev = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            rev = rev + str.charAt(i);
+        // Input from user
+        int n = sc.nextInt();
+
+        long fact = 1; 
+
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
         }
 
-
-        System.out.println("Reversed string: " + rev);
-
-        sc.close();
+        // Output
+        System.out.println("Factorial of " + n + " is: " + fact);
     }
 }
 ```
+
+
 ## OUTPUT:
-<img width="1283" height="346" alt="image" src="https://github.com/user-attachments/assets/534f0f79-6b9c-4995-92be-67f2c08e4b8c" />
+<img width="1286" height="348" alt="image" src="https://github.com/user-attachments/assets/711b62fd-42ff-41a1-b8d6-ff6cffb3fc8f" />
 
 
 ## RESULT:
-Thus, the Java program to reverse a given string was executed successfully and the reversed output was obtained.
+Thus, the program using looping statements in Java was successfully executed and the desired output was obtained.
 
