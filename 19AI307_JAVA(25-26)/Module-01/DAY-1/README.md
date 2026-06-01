@@ -1,74 +1,104 @@
-# Ex.No:1(A) INTRODUCTION TO JAVA PROGRAMMING, DATA TYPES, VARIABLES AND OPERATORS
+# Ex.No:1(B) CONDITIONAL STATEMENT
 
 ## QUESTION:
-A shop keeper would like to welcome their customers with their name.
+A pirate ship has a code lock that only opens if:
 
-Write a java program to get name from the user (String) and print it.
+The input code is even, and
 
+If it is less than 100, say "Weak Code".
+
+If it is between 100 and 999, say "Strong Code".
+
+If the code is odd, deny access.
+
+For example:
+
+Input	Result
+42
+Weak Code
 
 
 ## AIM:
-To develop a Java program that receives a single string input (the customer's name) from the user and prints a personalized greeting message in the format "Hello, [name]"
+Write a Java program to implement a conditional statement.
 
 
 ## ALGORITHM :
-1 .Start: Begin the main method execution.
+1 .Start the program.
 
-2 .Setup Input: Import and create an instance of the Scanner class, linking it to the standard input stream (System.in).
+2 .Import the package java.util.Scanner.
 
-3 .Read Name: Read the entire line of string input provided by the user and store it in a variable named customerName.
+3 .Create a Scanner object to read input from the user.
 
-4 .Process Output: Concatenate the fixed string "Hello, " with the value stored in customerName.
+4 .Read an integer value code from the user.
 
-5 .Print: Display the resulting greeting string to the console using System.out.println().
+5 .Check if code is even using code % 2 == 0.
 
-6 .Cleanup: Close the Scanner resource.
+6 .If the code is even:
+a. Check if code is less than 100:
 
-7 .End: Terminate the program execution.
+7 .Print "Weak Code".
+b. Else if code is between 100 and 999 (inclusive):
+
+8 .Print "Strong Code".
+c. Else (code is greater than 999):
+
+9 .Print "Access Denied".
+
+10 .If the code is odd:
+
+Print "Access Denied".
+
+11 .End the program.
+
+
 
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement variables and Operators using Java
+Program to implement a conditional statement using Java
 Developed by: Hema Dharshini N
-RegisterNumber: 212223220034
+RegisterNumber:  212223220034
 */
 ```
 
-## Sourcecode.java:
+## SOURCE CODE:
 ```
 import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-
-        String name = sc.nextLine();
-
-       
-        System.out.println("Hello, " + name);
-
-        sc.close();
+public class Pirate{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        int code=sc.nextInt();
+        if (code%2==0){
+            if (code<100){
+                System.out.println("Weak Code");
+            }
+            else if (code>=100 && code<=999){
+                System.out.println("Strong Code");
+            }
+            else{
+                System.out.println("Access Denied");
+            }
+        }
+        else{
+            System.out.println("Access Denied");
+            
+        }
+            
     }
-} 
+}
+
 ```
-
-
-
-
 
 
 ## OUTPUT:
-<img width="1280" height="257" alt="image" src="https://github.com/user-attachments/assets/b3ab17b2-f4b1-48b2-9f44-90d0bf797ccc" />
-
-
+<img width="1277" height="391" alt="image" src="https://github.com/user-attachments/assets/8089ccef-0dc3-4a4b-aa66-402ea4c82c76" />
 
 
 ## RESULT:
-The program successfully reads a name from the user and prints the message.
+Thus, the program to implement conditional statements in Java was executed successfully.
+
 
 
 
